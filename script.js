@@ -681,26 +681,55 @@ if(0){
 
 // 5. switch statement 
 
-let trafficLight = "green"
+// let trafficLight = "green"
 
-switch (trafficLight) {
-    case "red": console.log("stop vechile");
+// switch (trafficLight) {
+//     case "red": console.log("stop vechile");
     
         
-        break;
-    case "yellow": console.log("start vechile");
+//         break;
+//     case "yellow": console.log("start vechile");
     
         
-        break;
-    case "green": console.log("start vechile");
+//         break;
+//     case "green": console.log("start vechile");
     
         
-        break;
+//         break;
 
-    default: console.log("have a nice day");
+//     default: console.log("have a nice day");
     
-        break;
+//         break;
+// }
+
+
+
+// switch(condition){
+
+//     case value : statement ; break ;
+//     case value : statement ; break ;
+//     case value : statement ; break ;
+//     case value : statement ; break ;
+//     case value : statement ; break ;
+//     case value : statement ; break ;
+//     case value : statement ; break ;
+
+// }
+
+
+let trafficLight = ""
+
+switch(trafficLight){
+    case "red" : console.log("stop!!!!!"); break
+    case "yellow" : console.log("start!!!"); break
+    default : console.log("have a nice day");
+    
+    
+    
 }
+
+console.clear();
+
 
 
 
@@ -718,6 +747,160 @@ switch (trafficLight) {
 // Looping statement
 
 
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+console.log(6);
+console.log(7);
+console.log(8);
+console.log(9);
+console.log(10);
+
+
+// Types :- 
+
+// 1. for loop 
+
+// syntex : - 
+
+// for(intialiazation ; condition ; iteration ){
+//     statement
+// }
+
+
+// example : - 
+
+
+for(let a = 1 ; a <= 3 ; a++ ){
+    console.log(a); // 1 // 2 // 3
+    
+}
+
+// flow : - 
+
+// let a = 1 ; 1 <= 3 = true ; a++ = 2
+// let a = 2 ; 2 <= 3 = true ; a++ = 3
+// let a = 3 ; 3 <= 3 = true ; a++ = 4
+// let a = 4 ; 4 <= 3 = false.
+
+
+// add  / even 
+
+for(let i = 1 ; i <= 10 ; i++){
+    
+    if(i%2==0){
+        console.log("even :- ",i);
+        
+    }
+    
+}
+
+// 2. while loop 
+
+// syntex :- 
+
+
+// intialiazation 
+
+// while(condition){
+
+//     statement 
+
+//     iteration 
+// }
+
+// example 
+
+
+let value = 30
+
+while (value >= 50) {
+
+    console.log(value); // 10
+
+    value--
+
+    
+}
+
+
+// flow 
+
+
+// val = 3  , 3 >= 0 = true {  c(3) , 3--  } // 2
+// val = 2  , 2 >= 0 = true { c(2) , 2-- } // 1
+// val = 1  , 1 >= 0 = true { c(1) , 1-- } // 0
+// val = 0  , 0 >= 0 = true { c(0) , 0-- } // -1
+// val = -1 , -1 >= 0 = false . 
+
+
+// 3. do while loop 
+
+
+// syntex :- 
+
+// intialiazation 
+
+// do{
+//      statement 
+
+//      iteration 
+// }
+
+// while(condition )
+
+
+let b1 = 30 
+
+do {
+      console.log(b1);
+
+      b1--
+      
+}
+
+while(b1>=50)
+
+
+
+
+
+
+// 4. for of loop - string , array , function 
+
+// syntex : - 
+
+// for(declration type variable){
+//     statement
+// }
+
+
+let str = "javascript"
+let arr = ["apple","banana","orange","pineApple"]
+
+for(let c of arr){
+    console.log(c);
+    
+}
+
+
+
+// 5. for in loop - object
+
+let obj = {
+    name1 : "john",
+    role  : "developer",
+    salary: 1000000
+}
+
+for(let a in obj){
+    console.log(a , obj[a]);
+    
+}
+
+console.clear();
 
 
 
@@ -725,6 +908,155 @@ switch (trafficLight) {
 
 
 
+//  function 
+
+// block of code for specific task  /
+
+// reuse code and value  /
+
+// Avoid repeatation    /
+
+// organize the code   /
+
+// clean , readable code /
+
+// save time /
+
+// reduce code line , reliability /
+
+// easy debug /
+
+// dynamic value, use to parameter /
+
+
+// syntex : - 
+
+// function functionName(parameter){
+//     statement 
+//     return 
+//     yeild
+// }
+
+// functionName(argument)
+
+
+// example : -
+
+
+function one(){
+
+    console.log("hello world");
+    
+}
+
+// one()
+
+
+function flowControl(){
+
+    console.log("conditional");
+
+    if(true){
+        console.log("hi by if statement");
+        
+    }
+
+    console.log("looping");
+
+    for(let a = 0 ; a <= 5 ; a++){
+        console.log(a);
+        
+    }   
+}
+
+// flowControl()
+
+
+
+// parameter , argument 
+
+
+function b2(a){
+    console.log("name : - ",a);
+    
+}
+
+// b2("john")
+// b2("paul")
+// b2("paul1")
+// b2("paul2")
+// b2("paul3")
+
+
+function form(name, department , course){
+
+    console.log("name :- ",name);
+    console.log("department :- ",department);
+    console.log("course :- ", course);
+
+}
+
+
+// form("navi","ece","python")
+// form("kamal","cse","java")
+// form("praveen","ai","javascript")
+
+
+
+
+// return
+
+function firstEmployee(salary){
+    return salary
+}
+
+
+let employee1 = firstEmployee(100000)
+
+
+function secondEmployee(salary){
+    return salary
+}
+
+
+let employee2 = secondEmployee(200000)
+
+
+
+
+
+function office(){
+    console.log(employee1);
+    console.log(employee2);
+    
+}
+
+office()
+
+
+
+
+var string1 = "hello"
+
+console.log("value :-" , string1);
+
+
+
+let emp2 = {
+    name1 : "kamal",
+    salary: 400000
+}
+
+console.log(emp2.salary);
+
+
+function getObj(bonus){
+    console.log(emp2.name1);
+    console.log(emp2.salary+bonus);
+    
+}
+
+getObj(5000)
 
 
 
