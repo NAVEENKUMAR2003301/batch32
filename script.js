@@ -1323,12 +1323,408 @@ function random(a,b,...c){
 random(1,2,3,4,5,6,7,8,9)
 
 
+console.clear();
+
+
+// destracture
+
+
+// normal method 
+
+// Array 
+
+let fruit = ["apple","orange","banana","giwi"]
+
+let fruit1 = fruit[0]
+let fruit2 = fruit[1]
+let fruit3 = fruit[2]
+let fruit4 = fruit[3]
+
+console.log(fruit1,fruit2,fruit3,fruit4);
+
+
+// destracture of array
+
+
+let [x1,x2,x3,x4] = fruit
+
+console.log(x1,x2,x3,x4);
+
+
+
+// nested value of array
+
+
+let nested = [1,2,3,[4,5,[6,7,[8]]]]
+
+
+let nest1 = nested[0]
+let nest2 = nested[1]
+let nest3 = nested[2]
+let nest4 = nested[3][0]
+let nest5 = nested[3][1]
+let nest6 = nested[3][2][0]
+let nest7 = nested[3][2][1]
+let nest8 = nested[3][2][2][0]
+
+console.log(nest1,nest2,nest3,nest4,nest5,nest6,nest7,nest8);
+
+// destracture nested value
+
+
+let [t1,t2,t3,[t4,t5,[t6,t7,[t8]]]] = nested
+
+
+console.log(t1,t2,t3,t4,t5,t6,t7,t8);
+
+
+// object 
+
+
+let emp1 = {
+    name1 : "ravi",
+    role  : "sap mm",
+    salary : "6lpa"
+}
+
+
+let raviName = emp1.name1
+let raviRole = emp1.role
+let raviSalary = emp1.salary 
+
+console.log(raviName,raviRole,raviSalary);
+
+
+// destracture 
+
+let {name1,role,salary} = emp1
+
+console.log(name1,role,salary);
+
+
+// example :- 
+
+
+function store(...a){
+
+    let [e1,e2,e3,e4,e5,e6,e7,e8] = a
+
+    console.log(e1 + e8);
+    
+    
+
+}
+
+store(1,2,3,4,5,6,7,8)
+
+console.clear();
+
+
+// Array Advance Concept
+
+
+let array = [1,2,3,4,"hello",true,undefined,null,[1,2],{k:2}]
+
+console.log(array);
+console.log(array[0]);
+console.log(array[array.length-1]);
+
+
+// homogenous
+
+// hetrogenous
+
+// flexible
+
+
+
+//  //   if you are using add method, you can add multiple value.
+
+//  //   if you are using remove method , you can remove single value.
+
+// array manipulation method
+
+// types :- 
+
+let arr = [1,2,3]
+
+// 1. push() - you can add array of last value
+
+arr.push(4,5,6,7)
+
+// 2. pop()  - you can remove of array last value
+
+arr.pop()
+
+// 3. shift() - you can remove array of first value
+
+arr.shift()
+
+// 4. unshift() - you can add array of first value.
+
+arr.unshift(0,1)
+
+console.log(arr);
+
+
+
+// 5. splice() - (startingIndex , deleteCount , adding value )
+
+
+let arr10 = [1,2,3,40,50,6,7]
+
+arr10.splice(3,2,4,5)
+
+
+console.log(arr10);
+
+
+
+// Array merge method 
+
+
+// concat, 
+
+let a11 = [1,2,3,4]
+let a12 = [5,6,7,8]
+
+let totalArr = a11.concat(a12,9,10)
+
+console.log(totalArr);
+
+
+
+// slice, 
+
+let a13 = [1,2,3,4,5,678,91011,12,13,14]
+
+let sliceVal = a13.slice(5,7) // SI,EI + 1
+
+console.log(sliceVal);
+
+
+
+// flat, 
+
+let a14 = [1,2,[3,4,[5]]]
+
+let flatVal = a14.flat(Infinity)
+
+console.log(flatVal);
+
+
+// fill, 
+
+let a15 = [1,2,3,4] //, 1,2,3 ,"four"
+
+a15.fill("four",3,4) // value , si , ei +1
+
+console.log(a15);
+
+
+// includes, 
+
+let a16 = [6,7,5,9,10]
+
+let includesVal = a16.includes(9)
+
+console.log(includesVal);
+
+
+
+// indexOf, 
+
+let a17 = [1,2,3,3,2,1]
+
+let indexOfVal = a17.indexOf(2,2)
+
+console.log(indexOfVal);
+
+
+
+// lastIndexOf, 
+
+a17 = [1, 2, 3, 3, 2, 1];
+
+let lastIndexOfVal = a17.lastIndexOf(2,3)
+
+console.log(lastIndexOfVal);
+
+
+
+// reverse
+
+let a18 = [1,2,3,4,5,6]
+
+let reverseVal = a18.reverse()
+
+console.log(reverseVal);
+
+
+
+// sort, 
+
+let a19 = [9,4000,2,111,6,0,3] // 4000 = 4.000 , 111 = 1.11  
+// // 4.000 < 6
+
+let sortVal = a19.sort()
+
+console.log(sortVal);
+
+console.clear();
+
+
+//  Array higher order method
+
+let games = ["cricket","football","kabbadi","tennis","volleyball"]
+
+// 1. forEach()
+
+let forEachNew = games.forEach((currentElement , index , totalArray)=>{
+
+    return currentElement
+    
+     
+
+})
+
+console.log(forEachNew);
 
 
 
 
+// 2. map()
+
+let newMap = games.map((c,i,t)=>{
+
+    return c
+    
+})
+
+console.log(newMap);
 
 
+// 3. filter()
+
+let employeeDetials = [
+    {empName : "a" , salary : 100000},
+    {empName : "b" , salary : 200000},
+    {empName : "c" , salary : 300000},
+    {empName : "d" , salary : 400000},
+    {empName : "e", salary : 500000},
+    {empName : "f" , salary : 600000}
+]
+
+let salaryDate = employeeDetials.filter((c,i,t)=>{
+    return c.salary > 200000
+})
+
+console.log(salaryDate);
+
+
+// 4. find()
+
+let salaryEmp = employeeDetials.find((c,i,t)=>{
+
+    return c.salary > 200000
+
+})
+
+console.log(salaryEmp);
+
+
+
+employeeDetials = [
+  { empName: "a", salary: 100000 },
+  { empName: "b", salary: 200000 },
+  { empName: "c", salary: 300000 },
+  { empName: "d", salary: 400000 },
+  { empName: "e", salary: 500000 },
+  { empName: "f", salary: 600000 },
+];
+
+// 5. reduce()
+
+let allSalary = employeeDetials.reduce((acc,c,i,t)=>{
+
+    return acc + c.salary
+
+    //      0  + 1
+    //      1  + 2
+    //      3  + 3
+    //      6  + 4
+    //      10 + 5
+    //      15 + 6
+
+    // return 21
+
+},0) // 1 // 3 // 6 // 10  // 15 // 21
+
+console.log(allSalary);
+
+
+// 6. some() -- or
+
+let ar = [1,2,3,4]
+
+let someVal = ar.some((c,i,t)=>{
+
+    return c%2==0
+
+    // 1%2==0  false
+    // 2%2==0  true
+    // 3%2==0  false
+    // 4%2==0  true
+
+    // false || true || false || true = true 
+
+})
+
+console.log(someVal);
+
+
+// 7. every() -- and
+
+let ar1 = [2,4,6,8]
+
+let everyVal = ar1.every((c,i,t)=>{
+
+    return c%2==0
+
+})
+
+console.log(everyVal);
+
+
+// 8. sort()
+
+
+let ar2 = [2,30,4000,502,1,78] 
+
+let sortVal1 = ar2.sort((a,b)=>{
+
+    return b-a
+
+})
+
+console.log(sortVal1);
+
+
+// convert method 
+
+
+// Array to String 
+
+
+let array1 = [1,2,3,4]
+
+console.log(array1.join(10));
+
+// toString
+
+let array2 = [1,2,3,4,5]
+
+console.log(array2.toString());
 
 
 
