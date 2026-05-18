@@ -1726,6 +1726,134 @@ let array2 = [1,2,3,4,5]
 
 console.log(array2.toString());
 
+console.clear();
+
+
+// string methods :- 
+
+//   charAt(),  index --> v
+
+let str = "javascript"
+
+console.log(str.charAt(2));
+
+
+
+//   charCodeAt(), index --> asscii value
+
+console.log(str.charCodeAt(1));
+
+
+//   length,
+
+str = "javascript";
+
+console.log(str.length);
+
+
+
+//   slice,
+
+str = "javascript";
+
+
+console.log(str.slice(2,5));
+
+
+
+
+//   toUpperCase(),
+
+str = "Javascript";
+
+console.log(str.toUpperCase());
+
+
+//   toLowerCase(),
+
+str = "Javascript";
+
+console.log(str.toLowerCase());
+
+
+str = " javascript ";
+//   trim(),
+
+console.log(str.trim());
+
+
+// trimStart()
+
+console.log(str.trimStart());
+
+// trimEnd()
+
+console.log(str.trimEnd());
+
+
+
+
+//   includes(),
+
+str = "javascript";
+
+console.log(str.includes("v"));
+
+
+
+//   indexOf(),
+
+str = "javascript";
+
+console.log(str.indexOf("a",2));
+
+// lastIndexOf()
+
+str = "javascript";
+
+console.log(str.lastIndexOf("a",2));
+
+
+
+
+
+//   replace(),
+
+str = "javascript";
+
+console.log(str.replace("java","python"));
+
+
+
+//   startsWith(),
+
+str = "javascript";
+
+
+console.log(str.startsWith("j"));
+
+
+
+//   endsWith();
+
+console.log(str.endsWith("t"));
+
+
+// repeat 
+
+str = "javascript";
+
+console.log(str.repeat(20));
+
+
+
+// convert str -- > array
+
+//   split(),
+
+str = "javascript";
+
+console.log(str.split("a"));
 
 
 
@@ -1733,15 +1861,241 @@ console.log(array2.toString());
 
 
 
-
-
-
-
+console.clear();
 
 
 
 
 // // // date
+
+let data =new Date()
+
+console.log(data);
+
+// get
+
+// year
+
+console.log(data.getFullYear());
+
+// month
+
+console.log(data.getMonth());
+
+// date
+
+console.log(data.getDate());
+
+// day
+
+console.log(data.getDay());
+
+// hours 
+
+
+console.log(data.getHours());
+
+
+// minutes
+
+
+console.log(data.getMinutes());
+
+
+// seconds
+
+console.log(data.getSeconds());
+
+
+// set
+
+
+let data1 = new Date()
+
+console.log(data1);
+
+
+data1.setFullYear(2026)
+
+console.log(data1);
+
+
+data1.setMonth(4)
+
+console.log(data1);
+
+
+data1.setDate(19)
+
+console.log(data1);
+
+
+data1.setHours(12)
+
+console.log(data1);
+
+
+data1.setMinutes(12)
+
+console.log(data1);
+
+data1.setSeconds(12)
+
+console.log(data1);
+
+
+// local time 
+
+let data2 = new Date()
+
+console.log(data2);
+
+
+// time
+
+console.log(data2.toLocaleTimeString());
+
+
+// Date
+
+console.log(data2.toLocaleDateString());
+
+
+// both
+
+console.log(data2.toLocaleString());
+
+
+let month = ["jan","feb","mar","apr","may","jun","jul","Aug","sep","oct","nov","dec"]
+
+let data3 = new Date()
+
+console.log(month[data3.getMonth()]);
+
+
+console.clear();
+
+
+
+// Birthday day Finder
+
+// let Byear = prompt("enter your birthday year")
+// let BMonth = prompt("enter your birthday month")
+// let Bdate  = prompt("enter your birthday date")
+
+// let data4 = new Date()
+
+// data4.setFullYear(Byear)
+// data4.setMonth(BMonth-1)
+// data4.setDate(Bdate)
+
+// let dayVal = data4.getDay()
+// let day = ["sun","mon","tues","wed","thu","fri","sat"]
+
+// alert(day[dayVal]);
+
+
+
+// Async 
+
+// setTimeOut
+
+// setTimeout(()=>{
+
+//     console.log("hello");
+    
+
+// },5000)
+
+
+// // setInterval
+
+// setInterval(()=>{
+
+//     console.log("hi");
+    
+
+// },5000)
+
+
+// example 
+
+function one(){
+    console.log("one");
+    
+}
+
+function two(){
+    console.log("two");
+    
+}
+
+function three(){
+    console.log("three");
+    
+}
+
+
+one()
+setTimeout(two,2000)
+three()
+
+
+// promise 
+
+// resolve state  - successful data - .then()
+
+// reject state   - error data      - .catch()
+
+// bending state  - coming data     - .finally()
+
+
+
+// fetch(api links)
+
+let api = "https://fakestoreapi.com/products/"
+
+fetch(api)
+.then((randomData)=>{
+
+    // console.log(randomData); // json 
+
+    // json --> js = .json()
+
+   return randomData.json()
+    
+
+})
+.then((jsData)=>{
+
+    jsData.forEach((c,i,t)=>{
+
+        console.log(c.title);
+        
+
+    })
+    
+
+})
+.catch((error)=>{
+
+    console.log(error);
+    
+
+})
+.finally(()=>{
+
+    console.log("api request successfully done");
+    
+
+})
+
+
+
+
+
+
+
 
 
 
